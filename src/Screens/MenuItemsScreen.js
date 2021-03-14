@@ -8,6 +8,7 @@ import {
   Grid,
   Typography,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import menuItems from "../MenuItems";
 
 const MenuItemsScreen = () => {
@@ -17,7 +18,7 @@ const MenuItemsScreen = () => {
         {menuItems.map((item) => (
           <Grid item key={item._id}>
             <Card>
-              <CardActionArea>
+              <CardActionArea component={Link} to="/food">
                 <CardMedia
                   component="img"
                   image={item.image}

@@ -10,7 +10,7 @@ import { ShoppingCart } from "@material-ui/icons";
 
 const Header = () => {
   return (
-    <AppBar>
+    <AppBar color="default">
       <Toolbar>
         <Typography>{"FoodTech"}</Typography>
         <IconButton

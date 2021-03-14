@@ -22,7 +22,7 @@ import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@material-ui/icons/CheckBox";
 import { grey } from "@material-ui/core/colors";
 
-const FoodDetailsScreen = () => {
+const FoodDetailsScreen = ({ history }) => {
   return (
     <Box pt={8} pr={1}>
       <Grid container spacing={1}>
@@ -38,6 +38,7 @@ const FoodDetailsScreen = () => {
             style={{ paddingLeft: 0, paddingRight: 0 }}
             color="default"
             size="small"
+            onClick={() => history.push("/")}
           >
             <ArrowBack />
           </Button>
@@ -75,7 +76,7 @@ const FoodDetailsScreen = () => {
         <Grid item xs={12}>
           <Card>
             <CardContent style={{ padding: 12, textAlign: "center" }}>
-              <Fastfood fontSize="default" />
+              <Fastfood fontSize="default" color="primary" />
               <Typography
                 style={{ letterSpacing: 2 }}
                 style={{ fontSize: 12, color: grey[500], marginTop: 6 }}
@@ -90,7 +91,7 @@ const FoodDetailsScreen = () => {
         <Grid item xs={12}>
           <Card>
             <CardContent style={{ padding: 12, textAlign: "center" }}>
-              <TimerRounded fontSize="default" />
+              <TimerRounded fontSize="default" color="primary" />
               <Typography
                 style={{ letterSpacing: 2 }}
                 style={{ fontSize: 12, color: grey[500], marginTop: 6 }}
@@ -105,7 +106,7 @@ const FoodDetailsScreen = () => {
         <Grid item xs={12}>
           <Card>
             <CardContent style={{ padding: 12, textAlign: "center" }}>
-              <Fireplace fontSize="default" />
+              <Fireplace fontSize="default" color="primary" />
               <Typography
                 style={{ letterSpacing: 2 }}
                 style={{

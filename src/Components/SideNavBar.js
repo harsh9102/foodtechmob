@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Box, IconButton, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { RestaurantMenu } from "@material-ui/icons";
@@ -33,7 +34,12 @@ const SideNavBar = () => {
       position="fixed"
     >
       {menuCategories.map((caterogy) => (
-        <IconButton className={classes.menuBtn} aria-label={caterogy}>
+        <IconButton
+          className={classes.menuBtn}
+          aria-label={caterogy}
+          component={Link}
+          to="/"
+        >
           <Box
             style={{ padding: 0 }}
             display="flex"
